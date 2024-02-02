@@ -1,7 +1,11 @@
+// 函数npmRun接收一个参数agent，返回一个函数
 function npmRun(agent: string) {
+  // 返回的函数接收一个参数args，返回一个字符串
   return (args: string[]) => {
+    // 如果args的长度大于1，返回一个字符串
     if (args.length > 1)
       return `${agent} run ${args[0]} -- ${args.slice(1).join(' ')}`
+    // 否则返回一个字符串
     else return `${agent} run ${args[0]}`
   }
 }
