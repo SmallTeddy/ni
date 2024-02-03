@@ -10,37 +10,37 @@
 npm i -g <b>@antfu/ni</b>
 </pre>
 
-<a href='https://docs.npmjs.com/cli/v6/commands/npm'>npm</a> · <a href='https://yarnpkg.com'>yarn</a> · <a href='https://pnpm.io/'>pnpm</a> · <a href='https://bun.sh/'>bun</a>
-
-
-<br>
-
-
-### `ni` - install
-
-```bash
-ni
-
-# npm install
-# yarn install
-# pnpm install
-# bun install
-```
-
-```bash
-ni vite
-
-# npm i vite
-# yarn add vite
-# pnpm add vite
-# bun add vite
-```
-
-```bash
-ni @types/node -D
-
-# npm i @types/node -D
-# yarn add @types/node -D
+<a href='https://docs.npmjs.com/cli/v6/comm
+ // 获取用户设置的配置文件路径
+ const customRcPath = process.env.NI_CONFIG_FILE
+ 
+ // 获取当前操作系统的用户目录
+ const home = process.platform === 'win
+ const yarn = {
+   // 安装yarn代理
+   'agent': 'yarn {0}',
+   // 运行yarn命令
+   'run': 'yarn run {0}',
+   // 安装yarn命令
+   'install': 'yarn install {0}',
+   // 锁定yarn安装
+   'frozen': 'yarn install --frozen-lockfile',
+   // 全局安装yarn
+   'global': 'yarn global add {0}',
+   // 添加yarn
+   'add': 'yarn add {0}',
+   // 升级yarn
+   'upgrade': 'yarn upgrade {0}',
+   // 交互式升级yarn
+   'upgrade-interactive': 'yarn upgrade-interactive {0}',
+   // 执行npx命令
+   'execute': 'npx {0}',
+   // 卸载yarn
+   'uninstall': 'yarn remove {0}',
+   // 全局卸载yarn
+   'global_uninstall': 'yarn global remove {0}',
+ }
+  -D
 # pnpm add -D @types/node
 # bun add -d @types/node
 ```

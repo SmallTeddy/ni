@@ -11,18 +11,30 @@ function npmRun(agent: string) {
 }
 
 const yarn = {
+  // 安装yarn代理
   'agent': 'yarn {0}',
+  // 运行yarn命令
   'run': 'yarn run {0}',
+  // 安装yarn命令
   'install': 'yarn install {0}',
+  // 锁定yarn安装
   'frozen': 'yarn install --frozen-lockfile',
+  // 全局安装yarn
   'global': 'yarn global add {0}',
+  // 添加yarn
   'add': 'yarn add {0}',
+  // 升级yarn
   'upgrade': 'yarn upgrade {0}',
+  // 交互式升级yarn
   'upgrade-interactive': 'yarn upgrade-interactive {0}',
+  // 执行npx命令
   'execute': 'npx {0}',
+  // 卸载yarn
   'uninstall': 'yarn remove {0}',
+  // 全局卸载yarn
   'global_uninstall': 'yarn global remove {0}',
 }
+
 const pnpm = {
   'agent': 'pnpm {0}',
   'run': 'pnpm run {0}',

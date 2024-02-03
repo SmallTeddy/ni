@@ -5,16 +5,21 @@ import ini from 'ini'
 import type { Agent } from './agents'
 import { detect } from './detect'
 
+// 获取用户设置的配置文件路径
 const customRcPath = process.env.NI_CONFIG_FILE
 
+// 获取当前操作系统的用户目录
 const home = process.platform === 'win32'
   ? process.env.USERPROFILE
   : process.env.HOME
 
+// 设置默认的配置文件路径
 const defaultRcPath = path.join(home || '~/', '.nirc')
 
+// 如果用户设置了配置文件路径，则使用用户设置的路径，否则使用默认路径
 const rcPath = customRcPath || defaultRcPath
 
+// 定义配置接口
 interface Config {
   defaultAgent: Agent | 'prompt'
   globalAgent: Agent
